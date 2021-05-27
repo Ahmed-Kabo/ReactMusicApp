@@ -1,0 +1,46 @@
+.library {
+  width: 28rem;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 0 0 20px $blue;
+  background: $darkGray;
+  overflow-y: scroll;
+  transition: all 0.5s ease;
+  opacity: 0;
+  transform: translate3d(-105%, 0, 0);
+
+  &.active-library {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem;
+    letter-spacing: 2px;
+    font-weight: 200;
+  }
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $blue transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 20px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: $blue;
+  border-radius: 20px;
+  border: transparent;
+}
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}

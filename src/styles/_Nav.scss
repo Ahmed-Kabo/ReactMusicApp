@@ -1,0 +1,38 @@
+nav {
+  width: 90%;
+  margin: auto;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    span {
+      color: $blue;
+    }
+  }
+  button {
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    color: $white;
+    cursor: pointer;
+    border: 1px solid $blue;
+    transition: $transition;
+    border-radius: none;
+    &:hover {
+      background: $blue;
+      color: $white;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  nav {
+    button {
+      z-index: 10;
+    }
+  }
+}
